@@ -14,6 +14,19 @@
             "related": ".xml"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     }
   },
@@ -47,11 +60,16 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Newtonsoft.Json >= 13.0.3"
+      "Entidades >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,11 +78,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Entidades\\Entidades.csproj",
-      "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectName": "ConsoleApp1",
+      "projectPath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Franco\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -80,7 +98,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -92,12 +114,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

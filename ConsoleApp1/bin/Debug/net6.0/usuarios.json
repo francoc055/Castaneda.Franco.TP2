@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "lolo",
+    "NombreUsuario": "lolo123",
+    "CantidadDeCartas": 0,
+    "CantidadDePuntos": 0,
+    "Mano": [],
+    "CantidadDeVictorias": 0
+  },
+  {
+    "Id": 2,
+    "Nombre": "pepe",
+    "NombreUsuario": "pepe5",
+    "CantidadDeCartas": 0,
+    "CantidadDePuntos": 0,
+    "Mano": [],
+    "CantidadDeVictorias": 0
+  }
+]
