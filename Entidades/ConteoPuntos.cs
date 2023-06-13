@@ -137,5 +137,52 @@ namespace Entidades
             }
 
         }
+
+        public static void Escobas(Jugador jugadorUno, Jugador jugadorDos)
+        {
+            int totalJugadorUno = 0;
+            int escobasJugadorUno;
+            int totalJugadorDos = 0;
+            int escobasJugadorDos;
+
+            foreach (Carta carta in jugadorUno.CartasParaPuntos)
+            {
+                totalJugadorUno += carta.Valor;
+            }
+
+            foreach (Carta carta in jugadorDos.CartasParaPuntos)
+            {
+                totalJugadorDos += carta.Valor;
+            }
+
+            escobasJugadorUno = totalJugadorUno / 15;
+            escobasJugadorDos = totalJugadorDos / 15;
+
+            if(escobasJugadorUno > escobasJugadorDos)
+            {
+                jugadorUno.CantidadDePuntos++;
+            }
+            else
+            {
+                jugadorDos.CantidadDePuntos++;
+            }
+        }
+
+        public static string Ganador(Jugador jugadorUno, Jugador jugadorDos)
+        {
+            string msg = "El ganador es: ";
+            if (jugadorUno.CantidadDePuntos > jugadorDos.CantidadDePuntos)
+            {
+                return msg + jugadorUno.Nombre;
+            }
+            else if (jugadorDos.CantidadDePuntos > jugadorUno.CantidadDePuntos)
+            {
+                return msg + jugadorDos.Nombre;
+            }
+            else
+            {
+                return "Empatte :(";
+            }
+        }
     }
 }

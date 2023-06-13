@@ -38,7 +38,8 @@ namespace Entidades
         {
             Random random = new Random();
             int indice;
-            if (SinCartas(j1, j2))
+            int diferencia = mazo.Count - 6;
+            if (SinCartas(j1, j2) && diferencia > 0)
             {
                 //jugador uno
                 for (int i = 0; i < 3; i++)
@@ -62,22 +63,27 @@ namespace Entidades
                     j2.Mano.Add(mazo[indice]);
                     mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
                 }
-                j1.CantidadDeCartas = j1.Mano.Count;
-                j2.CantidadDeCartas = j2.Mano.Count;
-
-                //cartas sobre la mesa
-                for (int i = 0; i < 4; i++)
-                {
-                    indice = random.Next(0, mazo.Count);
-                    while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
-                    {
-                        indice = random.Next(0, 11);
-                    }
-                    partida.CartasEnMesa.Add(mazo[indice]);
-                    mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
-                }
+                
             }
+            
 
+        }
+
+        public void RepartirCartasEnMesa(List<Carta> mazo, Partida partida)
+        {
+            Random random = new Random();
+            int indice;
+
+            for (int i = 0; i < 4; i++)
+            {
+                indice = random.Next(0, mazo.Count);
+                while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
+                {
+                    indice = random.Next(0, 11);
+                }
+                partida.CartasEnMesa.Add(mazo[indice]);
+                mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
+            }
         }
 
         public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
@@ -127,15 +133,16 @@ namespace Entidades
         public bool SinCartas(Jugador j1, Jugador j2)
         {
             bool ret = true;
-            if(j1.CantidadDeCartas > 0  || j2.CantidadDeCartas > 0)
+            if(j1.Mano.Count > 0  || j2.Mano.Count > 0)
             {
                 ret = false;
             }
             return ret;
         }
 
-        public void Pensar(Jugador jugador, List<Carta> cartasEnMesa)
+        public bool Pensar(Jugador jugador, List<Carta> cartasEnMesa)
         {
+            bool ret = false;
             List<Carta> indicesDeCartas = new List<Carta>();
             if (cartasEnMesa.Count == 4)
             {
@@ -162,27 +169,57 @@ namespace Entidades
                     jugador.CartasParaPuntos.Add(item);
                     cartasEnMesa = EliminarCartaDelMazo(cartasEnMesa, item.Nombre);
                 }
-                if(VerificarCarta(jugador.CartasParaPuntos, jugador.Mano))
+                if(CompararManoIndices(jugador.Mano, indicesDeCartas, jugador.CartasParaPuntos))
                 {
+                    Console.WriteLine("salio bien");
                     Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
                 }
+                //if (VerificarCarta(jugador.CartasParaPuntos, jugador.Mano))
+                //{
+                //    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
+                //}
+            }
+            else if(cartasEnMesa.Count < 4 && jugador.Mano.Count > 0)
+            {
+                DejarCartaEnMesa(jugador.Mano, cartasEnMesa);
+                Console.WriteLine($"se dejo una carta en la mesa del jugador {jugador.Nombre}");
             }
             else
             {
-                DejarCartaEnMesa(jugador.Mano, cartasEnMesa);
-                Console.WriteLine($"se dejo una carta en la mesa del jugador  {jugador.Nombre}");
+                Console.WriteLine("juego trancado");
+                ret = true;
             }
+
+            return ret;
         }
 
-        public bool VerificarCarta(List<Carta> cartas, List<Carta> mano)
+        //public bool VerificarCarta(List<Carta> cartas, List<Carta> mano)
+        //{
+        //    foreach (Carta cartaMano in mano)
+        //    {
+        //        foreach (Carta cartaPuntos in cartas)
+        //        {
+        //            if(cartaMano == cartaPuntos)
+        //            {
+        //                mano.Remove(cartaMano);
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        public bool CompararManoIndices(List<Carta> mano, List<Carta> indices, List<Carta> cartasPuntos)
         {
-            foreach (Carta cartaMano in mano)
+            foreach (Carta cMano in mano)
             {
-                foreach (Carta cartaPuntos in cartas)
+                foreach (Carta cIndices in indices)
                 {
-                    if(cartaMano == cartaPuntos)
+                    if(cMano == cIndices)
                     {
-                        mano.Remove(cartaMano);
+                        //cartasPuntos.Remove(cMano);
+                        mano.Remove(cMano);
+                        indices.Remove(cMano);
                         return true;
                     }
                 }
@@ -194,7 +231,7 @@ namespace Entidades
         {
             Random random = new Random();
 
-            int indice = random.Next(0, manoDelJugador.Count + 1);
+            int indice = random.Next(0, manoDelJugador.Count);
 
             Carta aux = GetCarta(manoDelJugador[indice].Nombre);
 

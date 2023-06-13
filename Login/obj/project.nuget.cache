@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dsl3WalYUW72iW9FTWzDUv/ItWS9GxfreFulyoavU5h1S6V/VXYQIVK5ho8dn0t0O+olYpYGt7TCVEwDFTfi6Q==",
+  "dgSpecHash": "gz2HqqFrzaP162Fq0LVXoJp6hGlzhHPSX1Amlb1qdftl/lOHIJ9tnPYGzTHRAtbicatrMamhG7qbHuyRPW0vGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Login\\Login.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Franco\\Desktop\\Castañeda.Franco.TP2\\Login\\Forms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Franco\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

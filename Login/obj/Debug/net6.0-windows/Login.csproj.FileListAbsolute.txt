@@ -15,3 +15,4 @@ C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\ref
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\Login.pdb
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\Login.genruntimeconfig.cache
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\ref\Login.dll
+C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\Login.Properties.Resources.resources

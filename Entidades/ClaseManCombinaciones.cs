@@ -21,8 +21,10 @@ namespace Entidades
                 }
                 if (suma == 15)
                 {
-                    jugador.CartasParaPuntos.Clear();
-                    jugador.CartasParaPuntos.Add(carta);
+                    indices.Clear();
+                    indices.Add(carta);
+                    //jugador.CartasParaPuntos.Clear();
+                    //jugador.CartasParaPuntos.Add(carta);
                     break;
                 }
                 else
@@ -33,7 +35,6 @@ namespace Entidades
 
             if (suma == 15)
             {
-                indices.Clear();
                 foreach (Carta item in cartasEnMesa)
                 {
                     indices.Add(item);                                                           
@@ -53,8 +54,9 @@ namespace Entidades
                     {
                         indices.Clear();
                         indices.Add(cartasEnMesa[j]);
-                        jugador.CartasParaPuntos.Clear();
-                        jugador.CartasParaPuntos.Add(jugador.Mano[i]); 
+                        indices.Add(jugador.Mano[i]);
+                        //jugador.CartasParaPuntos.Clear();
+                        //jugador.CartasParaPuntos.Add(jugador.Mano[i]); 
                     }
                 }
             }
@@ -79,8 +81,9 @@ namespace Entidades
                             indices.Clear();
                             indices.Add(cartasEnMesa[j]);
                             indices.Add(cartasEnMesa[k]);
-                            jugador.CartasParaPuntos.Clear();
-                            jugador.CartasParaPuntos.Add(jugador.Mano[i]);
+                            indices.Add(jugador.Mano[i]);
+                            //jugador.CartasParaPuntos.Clear();
+                            //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                         }
                     }
                 }
@@ -108,8 +111,9 @@ namespace Entidades
                                     indices.Add(cartasEnMesa[j]);
                                     indices.Add(cartasEnMesa[k-2]);
                                     indices.Add(cartasEnMesa[k]);
-                                    jugador.CartasParaPuntos.Clear();
-                                    jugador.CartasParaPuntos.Add(jugador.Mano[i]);
+                                    indices.Add(jugador.Mano[i]);
+                                    //jugador.CartasParaPuntos.Clear();
+                                    //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                                 }
                             }
                             else if (k == 3)
@@ -122,8 +126,9 @@ namespace Entidades
                                 indices.Add(cartasEnMesa[j]);
                                 indices.Add(cartasEnMesa[k]);
                                 indices.Add(cartasEnMesa[k+1]);
-                                jugador.CartasParaPuntos.Clear();
-                                jugador.CartasParaPuntos.Add(jugador.Mano[i]);
+                                indices.Add(jugador.Mano[i]);
+                                //jugador.CartasParaPuntos.Clear();
+                                //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                             }
                         }
                         // evaluo la combinacion con el indice j en 1 -> 1 2 3 = '15'
@@ -135,8 +140,9 @@ namespace Entidades
                                 indices.Add(cartasEnMesa[j]);
                                 indices.Add(cartasEnMesa[k]);
                                 indices.Add(cartasEnMesa[k + 1]);
-                                jugador.CartasParaPuntos.Clear();
-                                jugador.CartasParaPuntos.Add(jugador.Mano[i]);
+                                indices.Add(jugador.Mano[i]);
+                                //jugador.CartasParaPuntos.Clear();
+                                //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                             }
                         }
                         else

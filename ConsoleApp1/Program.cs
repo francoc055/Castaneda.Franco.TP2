@@ -44,29 +44,38 @@ internal class Program
 
         //mostrar(j1, j2, partida1);
 
-        
-        partida1.IniciarPartida();
-        
-        mostrar(j1, j2, partida1);
-
-        Console.WriteLine("------------carta para punto j1-------------");
-        foreach (Carta item in j1.CartasParaPuntos)
+        //for (int i = 0; i < 6; i++)
+        //{
+        //    partida1.IniciarPartida();
+        //    mostrar(j1, j2, partida1);
+        //}
+        while(partida1.Mazo.MazoCartas.Count > 0)
         {
-            Console.WriteLine(item.ToString());
+            partida1.IniciarPartida();
+            mostrar(j1, j2, partida1);
         }
 
-        Console.WriteLine("------------carta para punto j2-------------");
-        foreach (Carta item in j2.CartasParaPuntos)
-        {
-            Console.WriteLine(item.ToString());
-        }
+        ConteoPuntos.ConteoCartas(j1, j2);
+        ConteoPuntos.Ganador(j1, j2);
+        
+
+        //Console.WriteLine("------------carta para punto j1-------------");
+        //foreach (Carta item in j1.CartasParaPuntos)
+        //{
+        //    Console.WriteLine(item.ToString());
+        //}
+
+        //Console.WriteLine("------------carta para punto j2-------------");
+        //foreach (Carta item in j2.CartasParaPuntos)
+        //{
+        //    Console.WriteLine(item.ToString());
+        //}
 
     }
 
     static void mostrar(Jugador j1, Jugador j2, Partida partida)
     {
         Console.WriteLine(j1.Nombre);
-        Console.WriteLine(j1.CantidadDeCartas);
         foreach (Carta item in j1.Mano)
         {
 

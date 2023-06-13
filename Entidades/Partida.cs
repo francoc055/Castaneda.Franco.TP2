@@ -21,7 +21,7 @@ namespace Entidades
         public int Puntos { get => puntos; set => puntos = value; }
         public int CartasRestantes { get => cartasRestantes; set => cartasRestantes = value; }
         public List<Carta> CartasEnMesa { get => cartasEnMesa; set => cartasEnMesa = value; }
-
+        public Mazo Mazo { get => mazo; set => mazo = value; }
 
         public Partida(Jugador j1, Jugador j2)
         {
@@ -29,19 +29,31 @@ namespace Entidades
             this.jugadorDos = j2;
             cartasEnMesa = new List<Carta>(); 
             simularPartida = new Simulacion();
-            mazo = new Mazo();
+            Mazo = new Mazo();
         }
 
         public void IniciarPartida()
         {
-            simularPartida.RepartirCartas(jugadorUno, jugadorDos, mazo.MazoCartas, this);
-            foreach (Carta item in cartasEnMesa)
+            
+           
+            if(jugadorUno.Mano.Count == 0 && jugadorUno.Mano.Count == 0)
             {
-                Console.WriteLine(item.ToString());
+                simularPartida.RepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
             }
-            Console.WriteLine("--------------------------------------------------------------");
-            simularPartida.Pensar(jugadorUno, cartasEnMesa);
-            simularPartida.Pensar(jugadorDos, cartasEnMesa);
+            if (cartasEnMesa.Count == 0)
+            {
+                simularPartida.RepartirCartasEnMesa(Mazo.MazoCartas, this);
+            }
+ 
+            bool trancadoJ1 = simularPartida.Pensar(jugadorUno, cartasEnMesa);
+            bool trancadoJ2 = simularPartida.Pensar(jugadorDos, cartasEnMesa);
+
+            if(trancadoJ1 && trancadoJ2)
+            {
+                jugadorUno.Mano.Clear();
+                jugadorDos.Mano.Clear();
+                simularPartida.RepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
+            }
         }
 
 
