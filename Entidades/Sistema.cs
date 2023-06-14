@@ -9,32 +9,31 @@ namespace Entidades
 {
     public static class Sistema
     {
-        //static List<Usuario> usuarios;
-        static List<Jugador> jugadores;
 
-        public static List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
+        static List<string> jugadores;
 
-        //public static List<Usuario> Usuarios { get => usuarios; set => usuarios = value; }
+
+        public static List<string> Jugadores { get => jugadores; set => jugadores = value; }
 
         static Sistema()
         {
-            jugadores = new List<Jugador>();
+            jugadores = new List<string>();
             HardocodearJugadores();
         }
 
 
         public static void HardocodearJugadores()
         {
-            jugadores.Add(new Jugador("Valeria"));
-            jugadores.Add(new Jugador("Rodrigo"));
-            jugadores.Add(new Jugador("Serena"));
-            jugadores.Add(new Jugador("Maximiliano"));
-            jugadores.Add(new Jugador("Isabella"));
-            jugadores.Add(new Jugador("Hernán"));
-            jugadores.Add(new Jugador("Celeste"));
-            jugadores.Add(new Jugador("Alejandro"));
-            jugadores.Add(new Jugador("Camila"));
-            jugadores.Add(new Jugador("Nicolás"));
+            jugadores.Add("Valeria");
+            jugadores.Add("Rodrigo");
+            jugadores.Add("Serena");
+            jugadores.Add("Maximiliano");
+            jugadores.Add("Isabella");
+            jugadores.Add("Hernán");
+            jugadores.Add("Celeste");
+            jugadores.Add("Alejandro");
+            jugadores.Add("Camila");
+            jugadores.Add("Nicolás");
         }
 
         public static void SerializarJson<T>(List<T> lista, string ruta)
@@ -45,7 +44,6 @@ namespace Entidades
                 opciones.WriteIndented = true;
                 string objJson = System.Text.Json.JsonSerializer.Serialize(lista, opciones);
                 sw.WriteLine(objJson);
-                Console.WriteLine(objJson);
             }
         }
 

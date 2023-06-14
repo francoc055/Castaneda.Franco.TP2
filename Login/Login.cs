@@ -11,11 +11,23 @@ namespace Login
             Sistema.SerializarJson(Sistema.Jugadores, "jugadores.json");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            FrmPrincipal formP = new FrmPrincipal();
-            formP.Show();
-            //this.Close();
+            if(txtUsuario.Text == "frankito" && txtContra.Text == "1234")
+            {
+                FrmPrincipal formP = new FrmPrincipal(txtUsuario.Text);
+                formP.Show();
+
+                this.Hide();
+            }
+           
+        }
+
+        private void btnRellenar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "frankito";
+            txtContra.Text = "1234";
         }
     }
 }

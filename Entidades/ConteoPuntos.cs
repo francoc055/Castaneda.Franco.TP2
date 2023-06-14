@@ -168,20 +168,20 @@ namespace Entidades
             }
         }
 
-        public static string Ganador(Jugador jugadorUno, Jugador jugadorDos)
+        public static Jugador Ganador(Jugador jugadorUno, Jugador jugadorDos)
         {
             string msg = "El ganador es: ";
             if (jugadorUno.CantidadDePuntos > jugadorDos.CantidadDePuntos)
             {
-                return msg + jugadorUno.Nombre;
+                return jugadorUno;
             }
             else if (jugadorDos.CantidadDePuntos > jugadorUno.CantidadDePuntos)
             {
-                return msg + jugadorDos.Nombre;
+                return jugadorDos;
             }
             else
             {
-                return "Empatte :(";
+                return null;
             }
         }
     }

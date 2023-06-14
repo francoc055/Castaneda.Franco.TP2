@@ -21,3 +21,4 @@ C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\bin\Debug\net6.0-windows\New
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\bin\Debug\net6.0-windows\Entidades.dll
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\bin\Debug\net6.0-windows\Entidades.pdb
 C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\Forms.csproj.CopyComplete
+C:\Users\Franco\Desktop\Castañeda.Franco.TP2\Login\obj\Debug\net6.0-windows\Forms.FrmPartida.resources

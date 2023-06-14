@@ -32,21 +32,23 @@
             groupBox1 = new GroupBox();
             label2 = new Label();
             label1 = new Label();
-            button1 = new Button();
+            btnIngresar = new Button();
             txtContra = new TextBox();
             txtUsuario = new TextBox();
             button2 = new Button();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            btnRellenar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnRellenar);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnIngresar);
             groupBox1.Controls.Add(txtContra);
             groupBox1.Controls.Add(txtUsuario);
             groupBox1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -77,16 +79,16 @@
             label1.TabIndex = 3;
             label1.Text = "Usuario";
             // 
-            // button1
+            // btnIngresar
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Center;
-            button1.Location = new Point(166, 144);
-            button1.Name = "button1";
-            button1.Size = new Size(65, 23);
-            button1.TabIndex = 2;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnIngresar.BackgroundImage = (Image)resources.GetObject("btnIngresar.BackgroundImage");
+            btnIngresar.BackgroundImageLayout = ImageLayout.Center;
+            btnIngresar.Location = new Point(166, 144);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(65, 23);
+            btnIngresar.TabIndex = 2;
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // txtContra
             // 
@@ -131,6 +133,16 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
+            // btnRellenar
+            // 
+            btnRellenar.Location = new Point(73, 144);
+            btnRellenar.Name = "btnRellenar";
+            btnRellenar.Size = new Size(75, 23);
+            btnRellenar.TabIndex = 5;
+            btnRellenar.Text = "Rellenar";
+            btnRellenar.UseVisualStyleBackColor = true;
+            btnRellenar.Click += btnRellenar_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -153,7 +165,7 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Button button1;
+        private Button btnIngresar;
         private TextBox txtContra;
         private TextBox txtUsuario;
         private Label label2;
@@ -161,5 +173,6 @@
         private Button button2;
         private Label label3;
         private PictureBox pictureBox1;
+        private Button btnRellenar;
     }
 }

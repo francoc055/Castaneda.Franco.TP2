@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            button1 = new Button();
+            btnMostrar = new Button();
             listBox1 = new ListBox();
             groupBox2 = new GroupBox();
             btnCrearPartida = new Button();
@@ -40,16 +43,24 @@
             cbJugadorOponente = new ComboBox();
             cbJugadorUser = new ComboBox();
             groupBox3 = new GroupBox();
+            dataGridViewHistorial = new DataGridView();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistorial).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnMostrar);
             groupBox1.Controls.Add(listBox1);
             groupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(2, 48);
@@ -59,17 +70,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Partidas";
             // 
-            // button1
+            // btnMostrar
             // 
-            button1.BackColor = Color.WhiteSmoke;
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(284, 22);
-            button1.Name = "button1";
-            button1.Size = new Size(93, 27);
-            button1.TabIndex = 1;
-            button1.Text = "Iniciar";
-            button1.UseVisualStyleBackColor = false;
+            btnMostrar.BackColor = Color.WhiteSmoke;
+            btnMostrar.FlatAppearance.BorderColor = Color.Black;
+            btnMostrar.FlatStyle = FlatStyle.Flat;
+            btnMostrar.Location = new Point(284, 22);
+            btnMostrar.Name = "btnMostrar";
+            btnMostrar.Size = new Size(93, 27);
+            btnMostrar.TabIndex = 1;
+            btnMostrar.Text = "Mostrar";
+            btnMostrar.UseVisualStyleBackColor = false;
+            btnMostrar.Click += btnMostrar_Click;
             // 
             // listBox1
             // 
@@ -92,7 +104,7 @@
             groupBox2.Controls.Add(cbJugadorOponente);
             groupBox2.Controls.Add(cbJugadorUser);
             groupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(241, 207);
+            groupBox2.Location = new Point(19, 214);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(342, 188);
             groupBox2.TabIndex = 1;
@@ -161,13 +173,56 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(dataGridViewHistorial);
             groupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox3.Location = new Point(410, 48);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(402, 143);
+            groupBox3.Size = new Size(402, 290);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Historial";
+            // 
+            // dataGridViewHistorial
+            // 
+            dataGridViewHistorial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewHistorial.BackgroundColor = Color.WhiteSmoke;
+            dataGridViewHistorial.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridViewHistorial.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Gray;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewHistorial.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewHistorial.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewHistorial.Dock = DockStyle.Fill;
+            dataGridViewHistorial.EnableHeadersVisualStyles = false;
+            dataGridViewHistorial.Location = new Point(3, 22);
+            dataGridViewHistorial.Name = "dataGridViewHistorial";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewHistorial.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewHistorial.RowHeadersVisible = false;
+            dataGridViewHistorial.RowTemplate.Height = 25;
+            dataGridViewHistorial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewHistorial.Size = new Size(396, 265);
+            dataGridViewHistorial.TabIndex = 0;
             // 
             // label4
             // 
@@ -189,12 +244,42 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.Location = new Point(544, 360);
+            button1.Name = "button1";
+            button1.Size = new Size(128, 23);
+            button1.TabIndex = 5;
+            button1.Text = "Guardar partidas";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Id";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre usuario";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Nombre oponente";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Ganador";
+            Column4.Name = "Column4";
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Salmon;
             ClientSize = new Size(818, 450);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(groupBox3);
@@ -202,10 +287,13 @@
             Controls.Add(groupBox1);
             Name = "FrmPrincipal";
             Text = "FrmPrincipal";
+            FormClosed += FrmPrincipal_FormClosed;
             Load += FrmPrincipal_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistorial).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -214,7 +302,7 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Button button1;
+        private Button btnMostrar;
         private ListBox listBox1;
         private GroupBox groupBox2;
         private Button btnCrearPartida;
@@ -226,5 +314,11 @@
         private GroupBox groupBox3;
         private Label label4;
         private PictureBox pictureBox1;
+        private DataGridView dataGridViewHistorial;
+        private Button button1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
     }
 }
