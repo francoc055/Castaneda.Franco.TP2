@@ -9,30 +9,34 @@ namespace Entidades
         string nombre;
         string nombreUsuario;
         string contraseña;
-        int cantidadDeVictorias = 0;
-        int cantidadDeDerrotas = 0;
-        float promedioDeVictorias = 0;
+        int victorias = 0;
+        int derrotas = 0;
+
 
 
 
         public int Id { get => id; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
-        public string Contraseña { set => contraseña = value; }
-        public int CantidadDeVictorias { get => cantidadDeVictorias; set => cantidadDeVictorias = value; }
-        public int CantidadDeDerrotas { get => cantidadDeDerrotas; set => cantidadDeDerrotas = value; }
-        public float PromedioDeVictorias { get => promedioDeVictorias; set => promedioDeVictorias = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
+        public int Victorias { get => victorias; set => victorias = value; }
+        public int Derrotas { get => derrotas; set => derrotas = value; }
 
-        public Usuario(string nombre, string nombreUsuario, string contraseña)
+        public Usuario(string nombre, string nombreUsuario, string contraseña) : this(nombre, nombreUsuario, contraseña, 0)
+        {
+        }
+        public Usuario(string nombre, string nombreUsuario, string contraseña, int id)
         {
             this.nombre = nombre;
             this.nombreUsuario = nombreUsuario;
             this.contraseña = contraseña;
+            this.id = id;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"ID: {id}");
             sb.AppendLine($"Nombre: {nombre}");
             sb.AppendLine($"Nombre de usuario: {nombreUsuario}");
 

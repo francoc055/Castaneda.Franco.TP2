@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        
+
         //Partida partida2 = new Partida();
 
         Jugador j1 = new Jugador("lolo");
@@ -13,9 +13,9 @@ internal class Program
         //Jugador j4 = new Jugador("pedro");
 
         Partida partida1 = new Partida(j1, j2);
-         
+
         //Simulacion simular = new Simulacion();
-        Mazo mazoCartas = new Mazo();
+        //Mazo mazoCartas = new Mazo();
         //Mazo mazoCartas2 = new Mazo();
 
         //Task hilo1 = Task.Run(() => simular.RepartirCartas(j1, j2, mazoCartas.MazoCartas, partida1));
@@ -49,15 +49,15 @@ internal class Program
         //    partida1.IniciarPartida();
         //    mostrar(j1, j2, partida1);
         //}
-        while(partida1.Mazo.MazoCartas.Count > 0)
-        {
-            partida1.IniciarPartida();
-            mostrar(j1, j2, partida1);
-        }
+        //while(partida1.Mazo.MazoCartas.Count > 0)
+        //{
+        //    partida1.IniciarPartida();
+        //    mostrar(j1, j2, partida1);
+        //}
 
-        ConteoPuntos.ConteoCartas(j1, j2);
-        ConteoPuntos.Ganador(j1, j2);
-        
+        //ConteoPuntos.ConteoCartas(j1, j2);
+        //ConteoPuntos.Ganador(j1, j2);
+
 
         //Console.WriteLine("------------carta para punto j1-------------");
         //foreach (Carta item in j1.CartasParaPuntos)
@@ -67,6 +67,14 @@ internal class Program
 
         //Console.WriteLine("------------carta para punto j2-------------");
         //foreach (Carta item in j2.CartasParaPuntos)
+        //{
+        //    Console.WriteLine(item.ToString());
+        //}
+
+
+        //List<Usuario> usuarios = AccesoDatos.Leer();
+
+        //foreach (Usuario item in usuarios)
         //{
         //    Console.WriteLine(item.ToString());
         //}

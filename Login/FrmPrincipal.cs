@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Forms
 {
@@ -19,22 +20,50 @@ namespace Forms
         List<string> jugadores;
         List<Task> hilos;
         List<Partida> partidasDelUsuario;
-        string nombreUser;
+        //string nombreUser;
+        private static object lockObject = new object();
+        Usuario usuario;
 
 
-        public FrmPrincipal(string nombreUser)
+
+        public FrmPrincipal(Usuario usuario)
         {
             InitializeComponent();
             jugadores = new List<string>();
             hilos = new List<Task>();
             partidasDelUsuario = new List<Partida>();
-            this.nombreUser = nombreUser;
+            //this.nombreUser = nombreUser;
+            this.usuario = usuario;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             CargarJugadores();
             CargarCombobox();
+            dataGridViewPartidas.ClearSelection();
+            CargarHistorialDelUsuario();
+
+
+        }
+
+        private void CargarHistorialDelUsuario()
+        {
+            try
+            {
+                List<Partida> partidas = AccesoDatos.LeerFiltrado(usuario);
+                if(partidas.Count > 0)
+                {
+                    foreach (Partida item in partidas)
+                    {
+                        ActualizarDataGridHistorial(item);
+                    }
+                }
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ocurrio un error");
+            }
         }
 
         private void CargarCombobox()
@@ -45,7 +74,7 @@ namespace Forms
             {
                 cbJugadorOponente.Items.Add(item);
             }
-            cbJugadorUser.Items.Add(nombreUser);
+            cbJugadorUser.Items.Add(usuario.NombreUsuario);
         }
         private void CargarJugadores()
         {
@@ -54,7 +83,7 @@ namespace Forms
 
         private async void btnCrearPartida_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(cbJugadorUser.Text) && !string.IsNullOrEmpty(cbJugadorOponente.Text))
+            if (!string.IsNullOrEmpty(cbJugadorUser.Text) && !string.IsNullOrEmpty(cbJugadorOponente.Text))
             {
                 Jugador jugador = new Jugador(cbJugadorUser.Text);
                 Jugador oponente = new Jugador(cbJugadorOponente.Text);
@@ -72,7 +101,10 @@ namespace Forms
             if (jugador is not null && oponente is not null)
             {
                 Partida partida = new Partida(jugador, oponente);
-                ActualizarListBox(partida);
+                partida.Nombre = partida.ToString();
+                //ActualizarListBox(partida);
+                ActualizarDataGridPartida(partida);
+
                 partidasDelUsuario.Add(partida);
 
                 while (partida.Mazo.MazoCartas.Count > 0)
@@ -97,16 +129,72 @@ namespace Forms
                 ConteoPuntos.CantidadDeSietes(jugador, oponente);
                 ConteoPuntos.MayorOro(jugador, oponente);
 
+                if (ConteoPuntos.Ganador(partida.JugadorUno, partida.JugadorDos) != null)
+                {
+                    partida.JugadorGanador = ConteoPuntos.Ganador(partida.JugadorUno, partida.JugadorDos);
+                }
 
-                //--ARREGLAR--// -> El proceso no puede acceder al archivo porque está siendo utilizado por otro proceso.
-                Sistema.SerializarJson<Partida>(partidasDelUsuario, "partidasDelUsuario.json");
+                lock (lockObject)
+                {
+                    Sistema.SerializarJson<Partida>(partidasDelUsuario, "partidasDelUsuario.json");
+                }
 
                 ActualizarDataGridHistorial(partida);
 
                 //MessageBox.Show($"El ganador es {ConteoPuntos.Ganador(jugador, oponente)}");
             }
-            
+
         }
+
+        private void dataGridViewPartidas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow filaSeleccionada = dataGridViewPartidas.Rows[e.RowIndex];
+
+                if(filaSeleccionada.Cells["Id"].Value != null)
+                {
+                    int valorId = (int)filaSeleccionada.Cells["Id"].Value;
+
+                    //MessageBox.Show(valorId.ToString());
+                    foreach (Partida item in partidasDelUsuario)
+                    {
+                        if (item.Id == valorId)
+                        {
+                            FrmPartida formPartida = new FrmPartida(item);
+                            formPartida.ShowDialog();
+                            break;
+                        }
+                    }
+                }
+                
+
+            }
+        }
+
+        private void ActualizarDataGridPartida(Partida partida)
+        {
+            if (InvokeRequired)
+            {
+                DelegadoActualizar delegado = ActualizarDataGridPartida;
+                object[] parametros = { partida };
+                Invoke(delegado, partida);
+            }
+            else
+            {
+                DataGridViewRow fila = new DataGridViewRow();
+
+                fila.CreateCells(dataGridViewPartidas);
+                fila.Cells[0].Value = partida.Id;
+                string nombre = $"{partida.JugadorUno.Nombre} vs {partida.JugadorDos.Nombre}";
+                fila.Cells[1].Value = nombre;
+
+                dataGridViewPartidas.Rows.Add(fila);
+                dataGridViewPartidas.ClearSelection();
+            }
+        }
+
+       
 
         private void ActualizarDataGridHistorial(Partida partida)
         {
@@ -124,9 +212,10 @@ namespace Forms
                 fila.Cells[0].Value = partida.Id;
                 fila.Cells[1].Value = partida.JugadorUno.Nombre;
                 fila.Cells[2].Value = partida.JugadorDos.Nombre;
-                if (ConteoPuntos.Ganador(partida.JugadorUno, partida.JugadorDos) != null)
+
+                if (partida.JugadorGanador != null)
                 {
-                    fila.Cells[3].Value = ConteoPuntos.Ganador(partida.JugadorUno, partida.JugadorDos).Nombre;
+                    fila.Cells[3].Value = partida.JugadorGanador.Nombre;
                 }
                 else
                 {
@@ -134,54 +223,59 @@ namespace Forms
                 }
 
                 dataGridViewHistorial.Rows.Add(fila);
-                
-                
+
+
             }
         }
 
-        public void ActualizarListBox(Partida partida)
-        {
-            if (this.listBox1.InvokeRequired)
-            {
+        
 
-                DelegadoActualizar delegado = ActualizarListBox;
-                object[] parametros = { partida };
-
-                this.pictureBox1.Invoke(delegado, parametros);
-            }
-            else
-            {
-                if(Thread.CurrentThread.ThreadState.ToString() == "Running")
-                {
-                    this.listBox1.Items.Add(partida.ToString() + " - en curso");
-                }
-                else
-                {
-                    this.listBox1.Items.Add(partida.ToString() + " - finalizada");
-
-                }
-                //this.listBox1.Items.Add(.ToString());
-            }
-        }
-
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            int indice = listBox1.SelectedIndex + 1;
-
-            foreach (Partida item in partidasDelUsuario)
-            {
-                if (item.Id == indice)
-                {
-                    FrmPartida formPartida = new FrmPartida(item);
-                    formPartida.ShowDialog();
-                    break;
-                }
-            }
-        }
+        
 
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+
+        private void btnGuardarPartida_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AsignarVictoriasDerrotas();
+
+                foreach (Partida partida in partidasDelUsuario)
+                {
+                    AccesoDatos.GuardarPartida(partida);
+                }
+
+                AccesoDatos.Actualizar(usuario);
+
+                partidasDelUsuario.Clear();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Ocurrio un error");
+            }
+
+        }
+
+        private void AsignarVictoriasDerrotas()
+        {
+            foreach (Partida partida in partidasDelUsuario)
+            {
+                if (partida.JugadorGanador.Nombre == partida.JugadorUno.Nombre)
+                {
+                    usuario.Victorias++;
+                }
+                else if (partida.JugadorGanador.Nombre != partida.JugadorUno.Nombre)
+                {
+                    usuario.Derrotas++;
+                }
+            }
+
+            MessageBox.Show($"victorias: {usuario.Victorias.ToString()} - derrotas {usuario.Derrotas.ToString()}");
+        }
+
+       
     }
 }
