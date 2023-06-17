@@ -22,6 +22,9 @@ namespace Entidades
         string nombre;
         Jugador jugadorGanador;
 
+        public CancellationToken cancellation;
+        public CancellationTokenSource cancellationSource;
+
         public Jugador JugadorUno { get => jugadorUno; set => jugadorUno = value; }
         public Jugador JugadorDos { get => jugadorDos; set => jugadorDos = value; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -57,6 +60,8 @@ namespace Entidades
             cartasEnMesa = new List<Carta>(); 
             simularPartida = new Simulacion();
             Mazo = new Mazo();
+            this.cancellationSource = new CancellationTokenSource();
+            this.cancellation = this.cancellationSource.Token;
         }
 
         private void CargarUltimoId()
@@ -78,22 +83,22 @@ namespace Entidades
 
             if (mazo.MazoCartas.Count == 40)
             {
-                simularPartida.RepartirCartasEnMesa(Mazo.MazoCartas, this);
+                simularPartida.IRepartirCartasEnMesa(Mazo.MazoCartas, this);
             }
             if (jugadorUno.Mano.Count == 0 && jugadorUno.Mano.Count == 0)
             {
-                simularPartida.RepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
+                simularPartida.IRepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
             }
             
  
-            bool trancadoJ1 = simularPartida.Pensar(jugadorUno, cartasEnMesa);
-            bool trancadoJ2 = simularPartida.Pensar(jugadorDos, cartasEnMesa);
+            bool trancadoJ1 = simularPartida.IPensar(jugadorUno, cartasEnMesa);
+            bool trancadoJ2 = simularPartida.IPensar(jugadorDos, cartasEnMesa);
 
             if(trancadoJ1 && trancadoJ2)
             {
                 jugadorUno.Mano.Clear();
                 jugadorDos.Mano.Clear();
-                simularPartida.RepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
+                simularPartida.IRepartirCartas(jugadorUno, jugadorDos, Mazo.MazoCartas, this);
             }
         }
 

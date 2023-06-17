@@ -35,9 +35,8 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
+            label5 = new Label();
             dataGridViewPartidas = new DataGridView();
-            Id = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
             btnCrearPartida = new Button();
             label3 = new Label();
@@ -54,7 +53,9 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             btnGuardarPartida = new Button();
-            label5 = new Label();
+            Id = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPartidas).BeginInit();
             groupBox2.SuspendLayout();
@@ -75,6 +76,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Partidas";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(10, 22);
+            label5.Name = "label5";
+            label5.Size = new Size(331, 19);
+            label5.TabIndex = 3;
+            label5.Text = "Hacer click sobre la partida para obtener informacion";
+            // 
             // dataGridViewPartidas
             // 
             dataGridViewPartidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -90,7 +100,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewPartidas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewPartidas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPartidas.Columns.AddRange(new DataGridViewColumn[] { Id, Column6 });
+            dataGridViewPartidas.Columns.AddRange(new DataGridViewColumn[] { Id, Column6, Estado });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.Gainsboro;
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -108,16 +118,6 @@
             dataGridViewPartidas.Size = new Size(386, 147);
             dataGridViewPartidas.TabIndex = 2;
             dataGridViewPartidas.CellClick += dataGridViewPartidas_CellClick;
-            // 
-            // Id
-            // 
-            Id.HeaderText = "Id";
-            Id.Name = "Id";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Nombre";
-            Column6.Name = "Column6";
             // 
             // groupBox2
             // 
@@ -300,14 +300,20 @@
             btnGuardarPartida.UseVisualStyleBackColor = true;
             btnGuardarPartida.Click += btnGuardarPartida_Click;
             // 
-            // label5
+            // Id
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(10, 22);
-            label5.Name = "label5";
-            label5.Size = new Size(331, 19);
-            label5.TabIndex = 3;
-            label5.Text = "Hacer click sobre la partida para obtener informacion";
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Nombre";
+            Column6.Name = "Column6";
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
             // 
             // FrmPrincipal
             // 
@@ -357,8 +363,9 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridView dataGridViewPartidas;
+        private Label label5;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Column6;
-        private Label label5;
+        private DataGridViewTextBoxColumn Estado;
     }
 }

@@ -1,751 +1,91 @@
 [
   {
     "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 0,
-      "Mano": [
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
-      "Mano": [
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        }
-      ]
-    },
-    "Nombre": "Partida - 5",
-    "Id": 5,
-    "JugadorGanador": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
-      "Mano": [
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
+      "Nombre": "frankito",
       "CantidadDePuntos": 4,
       "Mano": [
         {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
           "Nombre": "3basto",
           "Valor": 3
         },
         {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
           "Nombre": "10oro",
           "Valor": 8
-        },
+        }
+      ],
+      "CartasParaPuntos": [
         {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11espada",
+          "Nombre": "11oro",
           "Valor": 9
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
         },
         {
           "Nombre": "6copa",
           "Valor": 6
         },
         {
-          "Nombre": "1basto",
+          "Nombre": "1espada",
+          "Valor": 1
+        },
+        {
+          "Nombre": "7basto",
+          "Valor": 7
+        },
+        {
+          "Nombre": "7oro",
+          "Valor": 7
+        },
+        {
+          "Nombre": "2basto",
+          "Valor": 2
+        },
+        {
+          "Nombre": "2espada",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4copa",
+          "Valor": 4
+        },
+        {
+          "Nombre": "7copa",
+          "Valor": 7
+        },
+        {
+          "Nombre": "12oro",
+          "Valor": 10
+        },
+        {
+          "Nombre": "5basto",
+          "Valor": 5
+        },
+        {
+          "Nombre": "6basto",
+          "Valor": 6
+        },
+        {
+          "Nombre": "6oro",
+          "Valor": 6
+        },
+        {
+          "Nombre": "2copa",
+          "Valor": 2
+        },
+        {
+          "Nombre": "1oro",
           "Valor": 1
         }
       ]
     },
     "JugadorDos": {
-      "Nombre": "Serena",
+      "Nombre": "Rodrigo",
       "CantidadDePuntos": 1,
       "Mano": [
         {
-          "Nombre": "11copa",
-          "Valor": 9
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        }
-      ]
-    },
-    "Nombre": "Partida - 6",
-    "Id": 6,
-    "JugadorGanador": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 4,
-      "Mano": [
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11espada",
-          "Valor": 9
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
           "Nombre": "1basto",
           "Valor": 1
         },
         {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 2,
-      "Mano": [
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11espada",
-          "Valor": 9
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        }
-      ]
-    },
-    "Nombre": "Partida - 7",
-    "Id": 7,
-    "JugadorGanador": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
           "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 2,
-      "Mano": [
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "10basto",
           "Valor": 8
         }
       ],
@@ -755,848 +95,20 @@
           "Valor": 9
         },
         {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        }
-      ]
-    },
-    "Nombre": "Partida - 8",
-    "Id": 8,
-    "JugadorGanador": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 1,
-      "Mano": [
-        {
-          "Nombre": "11espada",
-          "Valor": 9
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
           "Nombre": "3oro",
           "Valor": 3
         },
         {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        }
-      ]
-    },
-    "Nombre": "Partida - 9",
-    "Id": 9,
-    "JugadorGanador": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 0,
-      "Mano": [
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "11espada",
-          "Valor": 9
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
-      "Mano": [
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
           "Nombre": "3copa",
           "Valor": 3
         },
         {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        }
-      ]
-    },
-    "Nombre": "Partida - 10",
-    "Id": 10,
-    "JugadorGanador": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
-      "Mano": [
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
           "Nombre": "12copa",
           "Valor": 10
         },
         {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 2,
-      "Mano": [
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
-        }
-      ]
-    },
-    "Nombre": "Partida - 11",
-    "Id": 11,
-    "JugadorGanador": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 3,
-      "Mano": [
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        },
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
           "Nombre": "5espada",
           "Valor": 5
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "4oro",
-          "Valor": 4
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "12copa",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "7copa",
-          "Valor": 7
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1oro",
-          "Valor": 1
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 0,
-      "Mano": [
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12basto",
-          "Valor": 10
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "1espada",
-          "Valor": 1
-        },
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "1basto",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
-        },
-        {
-          "Nombre": "10copa",
-          "Valor": 8
         },
         {
           "Nombre": "11espada",
@@ -1607,130 +119,404 @@
           "Valor": 6
         },
         {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
-      "Mano": [
-        {
-          "Nombre": "4basto",
-          "Valor": 4
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "5oro",
-          "Valor": 5
-        },
-        {
-          "Nombre": "3oro",
-          "Valor": 3
+          "Nombre": "10basto",
+          "Valor": 8
         },
         {
           "Nombre": "7espada",
           "Valor": 7
         },
         {
-          "Nombre": "5basto",
+          "Nombre": "1copa",
+          "Valor": 1
+        },
+        {
+          "Nombre": "5oro",
           "Valor": 5
         },
         {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "7basto",
-          "Valor": 7
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "10basto",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7oro",
-          "Valor": 7
+          "Nombre": "11basto",
+          "Valor": 9
         }
       ]
     },
     "Nombre": "Partida - 12",
     "Id": 12,
     "JugadorGanador": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 5,
+      "Nombre": "frankito",
+      "CantidadDePuntos": 4,
       "Mano": [
         {
-          "Nombre": "4basto",
-          "Valor": 4
+          "Nombre": "3basto",
+          "Valor": 3
         },
         {
-          "Nombre": "1copa",
-          "Valor": 1
+          "Nombre": "10oro",
+          "Valor": 8
         }
       ],
       "CartasParaPuntos": [
+        {
+          "Nombre": "11oro",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6copa",
+          "Valor": 6
+        },
+        {
+          "Nombre": "1espada",
+          "Valor": 1
+        },
+        {
+          "Nombre": "7basto",
+          "Valor": 7
+        },
+        {
+          "Nombre": "7oro",
+          "Valor": 7
+        },
+        {
+          "Nombre": "2basto",
+          "Valor": 2
+        },
+        {
+          "Nombre": "2espada",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4copa",
+          "Valor": 4
+        },
+        {
+          "Nombre": "7copa",
+          "Valor": 7
+        },
+        {
+          "Nombre": "12oro",
+          "Valor": 10
+        },
+        {
+          "Nombre": "5basto",
+          "Valor": 5
+        },
+        {
+          "Nombre": "6basto",
+          "Valor": 6
+        },
+        {
+          "Nombre": "6oro",
+          "Valor": 6
+        },
+        {
+          "Nombre": "2copa",
+          "Valor": 2
+        },
+        {
+          "Nombre": "1oro",
+          "Valor": 1
+        }
+      ]
+    }
+  },
+  {
+    "JugadorUno": {
+      "Nombre": "frankito",
+      "CantidadDePuntos": 5,
+      "Mano": [
+        {
+          "Nombre": "11espada",
+          "Valor": 9
+        },
+        {
+          "Nombre": "3copa",
+          "Valor": 3
+        }
+      ],
+      "CartasParaPuntos": [
+        {
+          "Nombre": "3espada",
+          "Valor": 3
+        },
+        {
+          "Nombre": "1basto",
+          "Valor": 1
+        },
+        {
+          "Nombre": "5basto",
+          "Valor": 5
+        },
+        {
+          "Nombre": "6copa",
+          "Valor": 6
+        },
+        {
+          "Nombre": "2oro",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4oro",
+          "Valor": 4
+        },
+        {
+          "Nombre": "2copa",
+          "Valor": 2
+        },
+        {
+          "Nombre": "7copa",
+          "Valor": 7
+        },
+        {
+          "Nombre": "12oro",
+          "Valor": 10
+        },
         {
           "Nombre": "5oro",
           "Valor": 5
         },
         {
+          "Nombre": "7oro",
+          "Valor": 7
+        },
+        {
+          "Nombre": "10copa",
+          "Valor": 8
+        },
+        {
+          "Nombre": "12copa",
+          "Valor": 10
+        },
+        {
+          "Nombre": "5copa",
+          "Valor": 5
+        },
+        {
+          "Nombre": "11basto",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6oro",
+          "Valor": 6
+        },
+        {
+          "Nombre": "11copa",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6basto",
+          "Valor": 6
+        }
+      ]
+    },
+    "JugadorDos": {
+      "Nombre": "Rodrigo",
+      "CantidadDePuntos": 0,
+      "Mano": [
+        {
+          "Nombre": "1espada",
+          "Valor": 1
+        },
+        {
           "Nombre": "3oro",
           "Valor": 3
+        }
+      ],
+      "CartasParaPuntos": [
+        {
+          "Nombre": "10espada",
+          "Valor": 8
         },
         {
           "Nombre": "7espada",
           "Valor": 7
         },
         {
+          "Nombre": "11oro",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6espada",
+          "Valor": 6
+        },
+        {
+          "Nombre": "7basto",
+          "Valor": 7
+        },
+        {
+          "Nombre": "4basto",
+          "Valor": 4
+        },
+        {
+          "Nombre": "4espada",
+          "Valor": 4
+        }
+      ]
+    },
+    "Nombre": "Partida - 13",
+    "Id": 13,
+    "JugadorGanador": {
+      "Nombre": "frankito",
+      "CantidadDePuntos": 5,
+      "Mano": [
+        {
+          "Nombre": "11espada",
+          "Valor": 9
+        },
+        {
+          "Nombre": "3copa",
+          "Valor": 3
+        }
+      ],
+      "CartasParaPuntos": [
+        {
+          "Nombre": "3espada",
+          "Valor": 3
+        },
+        {
+          "Nombre": "1basto",
+          "Valor": 1
+        },
+        {
           "Nombre": "5basto",
           "Valor": 5
+        },
+        {
+          "Nombre": "6copa",
+          "Valor": 6
+        },
+        {
+          "Nombre": "2oro",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4oro",
+          "Valor": 4
+        },
+        {
+          "Nombre": "2copa",
+          "Valor": 2
+        },
+        {
+          "Nombre": "7copa",
+          "Valor": 7
+        },
+        {
+          "Nombre": "12oro",
+          "Valor": 10
+        },
+        {
+          "Nombre": "5oro",
+          "Valor": 5
+        },
+        {
+          "Nombre": "7oro",
+          "Valor": 7
+        },
+        {
+          "Nombre": "10copa",
+          "Valor": 8
+        },
+        {
+          "Nombre": "12copa",
+          "Valor": 10
+        },
+        {
+          "Nombre": "5copa",
+          "Valor": 5
+        },
+        {
+          "Nombre": "11basto",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6oro",
+          "Valor": 6
+        },
+        {
+          "Nombre": "11copa",
+          "Valor": 9
+        },
+        {
+          "Nombre": "6basto",
+          "Valor": 6
+        }
+      ]
+    }
+  },
+  {
+    "JugadorUno": {
+      "Nombre": "frankito",
+      "CantidadDePuntos": 5,
+      "Mano": [
+        {
+          "Nombre": "10basto",
+          "Valor": 8
+        },
+        {
+          "Nombre": "11espada",
+          "Valor": 9
+        }
+      ],
+      "CartasParaPuntos": [
+        {
+          "Nombre": "7copa",
+          "Valor": 7
+        },
+        {
+          "Nombre": "10copa",
+          "Valor": 8
+        },
+        {
+          "Nombre": "5espada",
+          "Valor": 5
+        },
+        {
+          "Nombre": "12copa",
+          "Valor": 10
+        },
+        {
+          "Nombre": "7oro",
+          "Valor": 7
+        },
+        {
+          "Nombre": "3basto",
+          "Valor": 3
+        },
+        {
+          "Nombre": "5oro",
+          "Valor": 5
+        },
+        {
+          "Nombre": "12espada",
+          "Valor": 10
+        },
+        {
+          "Nombre": "4espada",
+          "Valor": 4
+        },
+        {
+          "Nombre": "1oro",
+          "Valor": 1
+        },
+        {
+          "Nombre": "1espada",
+          "Valor": 1
+        },
+        {
+          "Nombre": "12basto",
+          "Valor": 10
+        },
+        {
+          "Nombre": "1copa",
+          "Valor": 1
+        },
+        {
+          "Nombre": "3espada",
+          "Valor": 3
+        },
+        {
+          "Nombre": "2oro",
+          "Valor": 2
         },
         {
           "Nombre": "4copa",
@@ -1741,19 +527,63 @@
           "Valor": 6
         },
         {
+          "Nombre": "3oro",
+          "Valor": 3
+        },
+        {
+          "Nombre": "11oro",
+          "Valor": 9
+        },
+        {
+          "Nombre": "2espada",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4basto",
+          "Valor": 4
+        }
+      ]
+    },
+    "JugadorDos": {
+      "Nombre": "Rodrigo",
+      "CantidadDePuntos": 0,
+      "Mano": [
+        {
+          "Nombre": "2copa",
+          "Valor": 2
+        },
+        {
+          "Nombre": "2basto",
+          "Valor": 2
+        }
+      ],
+      "CartasParaPuntos": [
+        {
+          "Nombre": "6espada",
+          "Valor": 6
+        },
+        {
+          "Nombre": "11basto",
+          "Valor": 9
+        },
+        {
           "Nombre": "6basto",
           "Valor": 6
         },
         {
+          "Nombre": "11copa",
+          "Valor": 9
+        },
+        {
+          "Nombre": "10espada",
+          "Valor": 8
+        },
+        {
+          "Nombre": "4oro",
+          "Valor": 4
+        },
+        {
           "Nombre": "3copa",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3basto",
-          "Valor": 3
-        },
-        {
-          "Nombre": "3espada",
           "Valor": 3
         },
         {
@@ -1761,240 +591,110 @@
           "Valor": 7
         },
         {
-          "Nombre": "10espada",
+          "Nombre": "10oro",
           "Valor": 8
-        },
-        {
-          "Nombre": "5espada",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
+        }
+      ]
+    },
+    "Nombre": "Partida - 14",
+    "Id": 14,
+    "JugadorGanador": {
+      "Nombre": "frankito",
+      "CantidadDePuntos": 5,
+      "Mano": [
         {
           "Nombre": "10basto",
           "Valor": 8
         },
         {
-          "Nombre": "7oro",
-          "Valor": 7
-        }
-      ]
-    }
-  },
-  {
-    "JugadorUno": {
-      "Nombre": "agus05",
-      "CantidadDePuntos": 1,
-      "Mano": [
-        {
-          "Nombre": "2oro",
-          "Valor": 2
-        },
-        {
-          "Nombre": "5basto",
-          "Valor": 5
+          "Nombre": "11espada",
+          "Valor": 9
         }
       ],
       "CartasParaPuntos": [
         {
-          "Nombre": "12espada",
-          "Valor": 10
-        },
-        {
-          "Nombre": "2copa",
-          "Valor": 2
-        },
-        {
-          "Nombre": "3oro",
-          "Valor": 3
-        },
-        {
-          "Nombre": "4espada",
-          "Valor": 4
-        },
-        {
-          "Nombre": "7oro",
+          "Nombre": "7copa",
           "Valor": 7
-        },
-        {
-          "Nombre": "4copa",
-          "Valor": 4
-        },
-        {
-          "Nombre": "6oro",
-          "Valor": 6
         },
         {
           "Nombre": "10copa",
           "Valor": 8
         },
         {
-          "Nombre": "1basto",
-          "Valor": 1
-        }
-      ]
-    },
-    "JugadorDos": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 4,
-      "Mano": [
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7espada",
-          "Valor": 7
-        },
-        {
           "Nombre": "5espada",
           "Valor": 5
-        },
-        {
-          "Nombre": "12basto",
-          "Valor": 10
         },
         {
           "Nombre": "12copa",
           "Valor": 10
         },
         {
-          "Nombre": "3espada",
-          "Valor": 3
-        },
-        {
-          "Nombre": "2espada",
-          "Valor": 2
-        },
-        {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
-        }
-      ]
-    },
-    "Nombre": "Partida - 13",
-    "Id": 13,
-    "JugadorGanador": {
-      "Nombre": "Serena",
-      "CantidadDePuntos": 4,
-      "Mano": [
-        {
-          "Nombre": "2basto",
-          "Valor": 2
-        },
-        {
-          "Nombre": "11copa",
-          "Valor": 9
-        }
-      ],
-      "CartasParaPuntos": [
-        {
-          "Nombre": "11basto",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6basto",
-          "Valor": 6
-        },
-        {
-          "Nombre": "11oro",
-          "Valor": 9
-        },
-        {
-          "Nombre": "6copa",
-          "Valor": 6
-        },
-        {
-          "Nombre": "5copa",
-          "Valor": 5
-        },
-        {
-          "Nombre": "12oro",
-          "Valor": 10
-        },
-        {
-          "Nombre": "10oro",
-          "Valor": 8
-        },
-        {
-          "Nombre": "7espada",
+          "Nombre": "7oro",
           "Valor": 7
         },
         {
-          "Nombre": "5espada",
+          "Nombre": "3basto",
+          "Valor": 3
+        },
+        {
+          "Nombre": "5oro",
           "Valor": 5
+        },
+        {
+          "Nombre": "12espada",
+          "Valor": 10
+        },
+        {
+          "Nombre": "4espada",
+          "Valor": 4
+        },
+        {
+          "Nombre": "1oro",
+          "Valor": 1
+        },
+        {
+          "Nombre": "1espada",
+          "Valor": 1
         },
         {
           "Nombre": "12basto",
           "Valor": 10
         },
         {
-          "Nombre": "12copa",
-          "Valor": 10
+          "Nombre": "1copa",
+          "Valor": 1
         },
         {
           "Nombre": "3espada",
           "Valor": 3
         },
         {
+          "Nombre": "2oro",
+          "Valor": 2
+        },
+        {
+          "Nombre": "4copa",
+          "Valor": 4
+        },
+        {
+          "Nombre": "6copa",
+          "Valor": 6
+        },
+        {
+          "Nombre": "3oro",
+          "Valor": 3
+        },
+        {
+          "Nombre": "11oro",
+          "Valor": 9
+        },
+        {
           "Nombre": "2espada",
           "Valor": 2
         },
         {
-          "Nombre": "10espada",
-          "Valor": 8
-        },
-        {
-          "Nombre": "1copa",
-          "Valor": 1
-        },
-        {
-          "Nombre": "6espada",
-          "Valor": 6
+          "Nombre": "4basto",
+          "Valor": 4
         }
       ]
     }

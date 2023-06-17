@@ -15,7 +15,7 @@ namespace Entidades
         List<Carta> mano;
         List<Carta> cartasParaPuntos;
 
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string? Nombre { get => nombre; set => nombre = value; }
         //public int CantidadDeCartas { get => cantidadDeCartas; set => cantidadDeCartas = value; }
         public int CantidadDePuntos { get => cantidadDePuntos; set => cantidadDePuntos = value; }
         //public int CantidadDeVictorias { get => cantidadDeVictorias; set => cantidadDeVictorias = value; }

@@ -9,7 +9,7 @@ namespace Entidades
     public delegate List<Carta> DelegadoEjecutarCombinaciones(Jugador jugador, List<Carta> cartasEnMesa, List<Carta> indices);
 
 
-    public class Simulacion
+    public class Simulacion : ILogica
     {
         public event DelegadoEjecutarCombinaciones eTodasLasComb;
         public event DelegadoEjecutarCombinaciones eTresComb;
@@ -34,7 +34,40 @@ namespace Entidades
             this.eUnaComb += cmc.SumarTodasLasCartas;
         }
 
-        public void RepartirCartas(Jugador j1, Jugador j2, List<Carta> mazo, Partida partida)
+        public void IRepartirCartas(Jugador j1, Jugador j2, List<Carta> mazo, Partida partida)
+        {
+            Random random = new Random();
+            int indice;
+            int diferencia = mazo.Count - 6;
+            if (SinCartas(j1, j2) && diferencia > 0)
+            {
+                //jugador uno
+                for (int i = 0; i < 3; i++)
+                {
+                    indice = random.Next(0, mazo.Count);
+                    while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
+                    {
+                        indice = random.Next(0, 11);
+                    }
+                    j1.Mano.Add(mazo[indice]);
+                    mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
+                }
+                //jugador dos
+                for (int i = 0; i < 3; i++)
+                {
+                    indice = random.Next(0, mazo.Count);
+                    while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
+                    {
+                        indice = random.Next(0, 11);
+                    }
+                    j2.Mano.Add(mazo[indice]);
+                    mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
+                }
+
+            }
+        }
+
+        /*public void RepartirCartas(Jugador j1, Jugador j2, List<Carta> mazo, Partida partida)
         {
             Random random = new Random();
             int indice;
@@ -67,9 +100,10 @@ namespace Entidades
             }
             
 
-        }
+        }*/
 
-        public void RepartirCartasEnMesa(List<Carta> mazo, Partida partida)
+
+        public void IRepartirCartasEnMesa(List<Carta> mazo, Partida partida)
         {
             Random random = new Random();
             int indice;
@@ -85,6 +119,23 @@ namespace Entidades
                 mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
             }
         }
+
+        /*public void RepartirCartasEnMesa(List<Carta> mazo, Partida partida)
+        {
+            Random random = new Random();
+            int indice;
+
+            for (int i = 0; i < 4; i++)
+            {
+                indice = random.Next(0, mazo.Count);
+                while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
+                {
+                    indice = random.Next(0, 11);
+                }
+                partida.CartasEnMesa.Add(mazo[indice]);
+                mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
+            }
+        }*/
 
         public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
         {
@@ -140,7 +191,60 @@ namespace Entidades
             return ret;
         }
 
-        public bool Pensar(Jugador jugador, List<Carta> cartasEnMesa)
+        public bool IPensar(Jugador jugador, List<Carta> cartasEnMesa)
+        {
+            bool ret = false;
+            List<Carta> indicesDeCartas = new List<Carta>();
+            if (cartasEnMesa.Count == 4)
+            {
+                indicesDeCartas = eTodasLasComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
+            }
+            else if (cartasEnMesa.Count == 3)
+            {
+                indicesDeCartas = eTresComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
+            }
+            else if (cartasEnMesa.Count == 2)
+            {
+                indicesDeCartas = eDosComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
+            }
+            else if (cartasEnMesa.Count == 1)
+            {
+                indicesDeCartas = eUnaComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
+            }
+
+
+            if (indicesDeCartas.Count > 0)
+            {
+                foreach (Carta item in indicesDeCartas)
+                {
+                    jugador.CartasParaPuntos.Add(item);
+                    cartasEnMesa = EliminarCartaDelMazo(cartasEnMesa, item.Nombre);
+                }
+                if (CompararManoIndices(jugador.Mano, indicesDeCartas, jugador.CartasParaPuntos))
+                {
+                    Console.WriteLine("salio bien");
+                    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
+                }
+                //if (VerificarCarta(jugador.CartasParaPuntos, jugador.Mano))
+                //{
+                //    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
+                //}
+            }
+            else if (cartasEnMesa.Count < 4 && jugador.Mano.Count > 0)
+            {
+                DejarCartaEnMesa(jugador.Mano, cartasEnMesa);
+                Console.WriteLine($"se dejo una carta en la mesa del jugador {jugador.Nombre}");
+            }
+            else
+            {
+                Console.WriteLine("juego trancado");
+                ret = true;
+            }
+
+            return ret;
+        }
+
+        /*public bool Pensar(Jugador jugador, List<Carta> cartasEnMesa)
         {
             bool ret = false;
             List<Carta> indicesDeCartas = new List<Carta>();
@@ -191,7 +295,7 @@ namespace Entidades
             }
 
             return ret;
-        }
+        }*/
 
         //public bool VerificarCarta(List<Carta> cartas, List<Carta> mano)
         //{

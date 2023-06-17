@@ -170,19 +170,16 @@ namespace Entidades
 
         public static Jugador Ganador(Jugador jugadorUno, Jugador jugadorDos)
         {
-            string msg = "El ganador es: ";
+           
             if (jugadorUno.CantidadDePuntos > jugadorDos.CantidadDePuntos)
             {
                 return jugadorUno;
             }
-            else if (jugadorDos.CantidadDePuntos > jugadorUno.CantidadDePuntos)
+            else
             {
                 return jugadorDos;
             }
-            else
-            {
-                return null;
-            }
+            
         }
     }
 }

@@ -41,7 +41,7 @@
             btnRefrescar = new Button();
             label4 = new Label();
             button1 = new Button();
-            button2 = new Button();
+            btnCancelarPartida = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -173,14 +173,15 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
+            // btnCancelarPartida
             // 
-            button2.Location = new Point(648, 166);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 26);
-            button2.TabIndex = 6;
-            button2.Text = "Cancelar partida";
-            button2.UseVisualStyleBackColor = true;
+            btnCancelarPartida.Location = new Point(648, 166);
+            btnCancelarPartida.Name = "btnCancelarPartida";
+            btnCancelarPartida.Size = new Size(106, 26);
+            btnCancelarPartida.TabIndex = 6;
+            btnCancelarPartida.Text = "Cancelar partida";
+            btnCancelarPartida.UseVisualStyleBackColor = true;
+            btnCancelarPartida.Click += btnCancelarPartida_Click;
             // 
             // FrmPartida
             // 
@@ -188,7 +189,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Salmon;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(btnCancelarPartida);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(btnRefrescar);
@@ -220,6 +221,6 @@
         private Button btnRefrescar;
         private Label label4;
         private Button button1;
-        private Button button2;
+        private Button btnCancelarPartida;
     }
 }
