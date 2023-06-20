@@ -155,9 +155,9 @@
             label3.Font = new Font("Times New Roman", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(245, 18);
             label3.Name = "label3";
-            label3.Size = new Size(145, 23);
+            label3.Size = new Size(123, 23);
             label3.TabIndex = 2;
-            label3.Text = "La escoba de 15";
+            label3.Text = "La pala de 15";
             // 
             // pictureBox1
             // 

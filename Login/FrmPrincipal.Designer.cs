@@ -296,9 +296,9 @@
             label4.Font = new Font("Times New Roman", 20.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(296, 9);
             label4.Name = "label4";
-            label4.Size = new Size(203, 32);
+            label4.Size = new Size(176, 32);
             label4.TabIndex = 3;
-            label4.Text = "La escoba de 15";
+            label4.Text = "La pala de 15";
             // 
             // pictureBox1
             // 

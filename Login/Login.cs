@@ -22,7 +22,7 @@ namespace Login
             {
                 throw new MiExcepcion("ocurrio un error");
             }
-            
+
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
