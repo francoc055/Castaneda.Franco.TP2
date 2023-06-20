@@ -8,6 +8,8 @@ namespace Login
         public Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             Sistema.SerializarJson(Sistema.Jugadores, "jugadores.json");
         }
 

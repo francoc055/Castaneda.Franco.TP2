@@ -33,6 +33,8 @@ namespace Forms
         public FrmPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             jugadores = new List<string>();
             hilos = new List<Task>();
             partidasDelUsuario = new List<Partida>();
@@ -164,8 +166,6 @@ namespace Forms
 
         private void ActualizarEstado(Partida partida)
         {
-            //int valorBuscado = id;
-       
             DataGridViewRow filaEncontrada = null;
 
             foreach (DataGridViewRow fila in dataGridViewPartidas.Rows)
@@ -208,7 +208,6 @@ namespace Forms
                     int valorId = (int)filaSeleccionada.Cells["Id"].Value;
                     if (partidasDelUsuario.Count > 0)
                     {
-                        //MessageBox.Show(valorId.ToString());
                         foreach (Partida item in partidasDelUsuario)
                         {
                             if (item.Id == valorId)
@@ -298,10 +297,6 @@ namespace Forms
             }
         }
 
-
-
-
-
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -313,10 +308,12 @@ namespace Forms
             {
                 AsignarVictoriasDerrotas();
 
-                //NO PUEDO GUARDAR UNA PARTIDA CON UN JUGADOR NULL
                 foreach (Partida partida in partidasDelUsuario)
                 {
-                    AccesoDatos.GuardarPartida(partida);
+                    if (partida.JugadorGanador is not null)
+                    {
+                        AccesoDatos.GuardarPartida(partida);
+                    }
                 }
 
                 AccesoDatos.Actualizar(usuario);

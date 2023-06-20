@@ -14,17 +14,15 @@ namespace Entidades
             int suma = 0;
             foreach (Carta carta in jugador.Mano)
             {
-                
+                suma = carta.Valor;
                 foreach (Carta item in cartasEnMesa)
                 {
-                    suma += carta.Valor + item.Valor;
+                    suma += item.Valor;
                 }
                 if (suma == 15)
                 {
                     indices.Clear();
                     indices.Add(carta);
-                    //jugador.CartasParaPuntos.Clear();
-                    //jugador.CartasParaPuntos.Add(carta);
                     break;
                 }
                 else
@@ -149,7 +147,6 @@ namespace Entidades
                         {
                             break;
                         }
-
                     }
                 }
             }

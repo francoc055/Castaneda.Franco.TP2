@@ -137,54 +137,81 @@ namespace Entidades
             }
         }*/
 
+        //public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
         public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
         {
-            Carta auxCarta = GetCarta(nombre);
-            foreach (Carta carta in mazo)
+            if(nombre is null || mazo is null)
             {
-                if (carta == auxCarta)
-                {
-                    mazo.Remove(carta);
-                    break;
-                }
+                throw new MiExcepcion("El nombre o la lista es nulo");
             }
-            return mazo;
+            else if(mazo.Count > 0 && nombre != string.Empty)
+            {
+                Carta auxCarta = GetCarta(nombre);
+                foreach (Carta carta in mazo)
+                {
+                    if (carta == auxCarta)
+                    {
+                        mazo.Remove(carta);
+                        break;
+                    }
+                }
+                return mazo;
+            }
+            
+            return null;
         }
 
         public bool ExisteLaCarta(List<Carta> mazo, string nombre)
         {
-            Carta auxCarta = GetCarta(nombre);
-            foreach (Carta carta in mazo)
+            if (nombre is null || mazo is null)
             {
-                if(carta == auxCarta)
+                throw new MiExcepcion("El nombre o la lista es nulo");
+            }
+            else if(nombre != string.Empty)
+            {
+                Carta auxCarta = GetCarta(nombre);
+                foreach (Carta carta in mazo)
                 {
-                    return true;
+                    if (carta == auxCarta)
+                    {
+                        return true;
+                    }
                 }
             }
+            
 
             return false;
         }
 
         public Carta GetCarta(string nombre)
         {
-            
             Mazo auxMazo = new Mazo();
-            
-            for (int i = 0; i < auxMazo.MazoCartas.Count; i++)
+            if(nombre is null)
             {
-                if (auxMazo.MazoCartas[i].Nombre == nombre)
+                throw new MiExcepcion("El nombre es nulo");
+            }
+            else if(nombre != string.Empty)
+            {
+                for (int i = 0; i < auxMazo.MazoCartas.Count; i++)
                 {
-                    return auxMazo.MazoCartas[i];
+                    if (auxMazo.MazoCartas[i].Nombre == nombre)
+                    {
+                        return auxMazo.MazoCartas[i];
+                    }
                 }
             }
-
+            
             return null;
         }
 
         public bool SinCartas(Jugador j1, Jugador j2)
         {
             bool ret = true;
-            if(j1.Mano.Count > 0  || j2.Mano.Count > 0)
+            if(j1 is null || j2 is null)
+            {
+                throw new MiExcepcion("j1 o j2 es nulo");
+            }
+            else if (j1.Mano.Count > 0  || j2.Mano.Count > 0)
             {
                 ret = false;
             }
@@ -220,15 +247,12 @@ namespace Entidades
                     jugador.CartasParaPuntos.Add(item);
                     cartasEnMesa = EliminarCartaDelMazo(cartasEnMesa, item.Nombre);
                 }
-                if (CompararManoIndices(jugador.Mano, indicesDeCartas, jugador.CartasParaPuntos))
+                if (CompararManoIndices(jugador.Mano, indicesDeCartas))
                 {
                     Console.WriteLine("salio bien");
                     Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
                 }
-                //if (VerificarCarta(jugador.CartasParaPuntos, jugador.Mano))
-                //{
-                //    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
-                //}
+
             }
             else if (cartasEnMesa.Count < 4 && jugador.Mano.Count > 0)
             {
@@ -244,76 +268,9 @@ namespace Entidades
             return ret;
         }
 
-        /*public bool Pensar(Jugador jugador, List<Carta> cartasEnMesa)
-        {
-            bool ret = false;
-            List<Carta> indicesDeCartas = new List<Carta>();
-            if (cartasEnMesa.Count == 4)
-            {
-                indicesDeCartas = eTodasLasComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
-            }
-            else if(cartasEnMesa.Count == 3)
-            {
-                indicesDeCartas = eTresComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
-            }
-            else if(cartasEnMesa.Count == 2)
-            {
-                indicesDeCartas = eDosComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
-            }
-            else if(cartasEnMesa.Count == 1)
-            {
-                indicesDeCartas = eUnaComb.Invoke(jugador, cartasEnMesa, indicesDeCartas);
-            }
-            
+        
 
-            if(indicesDeCartas.Count > 0)
-            {
-                foreach (Carta item in indicesDeCartas)
-                {
-                    jugador.CartasParaPuntos.Add(item);
-                    cartasEnMesa = EliminarCartaDelMazo(cartasEnMesa, item.Nombre);
-                }
-                if(CompararManoIndices(jugador.Mano, indicesDeCartas, jugador.CartasParaPuntos))
-                {
-                    Console.WriteLine("salio bien");
-                    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
-                }
-                //if (VerificarCarta(jugador.CartasParaPuntos, jugador.Mano))
-                //{
-                //    Console.WriteLine($"se actualizo la mano de {jugador.Nombre}");
-                //}
-            }
-            else if(cartasEnMesa.Count < 4 && jugador.Mano.Count > 0)
-            {
-                DejarCartaEnMesa(jugador.Mano, cartasEnMesa);
-                Console.WriteLine($"se dejo una carta en la mesa del jugador {jugador.Nombre}");
-            }
-            else
-            {
-                Console.WriteLine("juego trancado");
-                ret = true;
-            }
-
-            return ret;
-        }*/
-
-        //public bool VerificarCarta(List<Carta> cartas, List<Carta> mano)
-        //{
-        //    foreach (Carta cartaMano in mano)
-        //    {
-        //        foreach (Carta cartaPuntos in cartas)
-        //        {
-        //            if(cartaMano == cartaPuntos)
-        //            {
-        //                mano.Remove(cartaMano);
-        //                return true;
-        //            }
-        //        }
-        //    }
-        //    return false;
-        //}
-
-        public bool CompararManoIndices(List<Carta> mano, List<Carta> indices, List<Carta> cartasPuntos)
+        public bool CompararManoIndices(List<Carta> mano, List<Carta> indices)
         {
             foreach (Carta cMano in mano)
             {
@@ -321,7 +278,6 @@ namespace Entidades
                 {
                     if(cMano == cIndices)
                     {
-                        //cartasPuntos.Remove(cMano);
                         mano.Remove(cMano);
                         indices.Remove(cMano);
                         return true;
@@ -344,9 +300,5 @@ namespace Entidades
             manoDelJugador.RemoveAt(indice);
         }
 
-
-        //public List<Carta> JuntarQuince(List<Carta> manoDelJugador, List<Carta> cartasEnMesa) { }
-
-        //public List<Carta> DejarCartaEnMesa(List<Carta> manoDelJugador) { }
     }
 }
