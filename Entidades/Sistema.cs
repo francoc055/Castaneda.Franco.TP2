@@ -55,15 +55,23 @@ namespace Entidades
 
         public static List<T> DeserializarJson<T>(string ruta)
         {
-            if (File.Exists(ruta))
+            try
             {
-                using (StreamReader sr = new StreamReader(ruta))
+                if (File.Exists(ruta))
                 {
-                    string json_str = sr.ReadToEnd();
-                    List<T> registro = JsonConvert.DeserializeObject<List<T>>(json_str);
-                    return registro;
+                    using (StreamReader sr = new StreamReader(ruta))
+                    {
+                        string json_str = sr.ReadToEnd();
+                        List<T> registro = JsonConvert.DeserializeObject<List<T>>(json_str);
+                        return registro;
+                    }
                 }
             }
+            catch
+            {
+                throw new MiExcepcion("ocurrio un error");
+            }
+           
             return null;
         }
     }

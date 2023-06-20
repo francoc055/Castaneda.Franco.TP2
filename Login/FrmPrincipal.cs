@@ -153,7 +153,7 @@ namespace Forms
             foreach (DataGridViewRow fila in dataGridViewPartidas.Rows)
             {
 
-                int valorColumna = (int)fila.Cells["id"].Value; 
+                int valorColumna = (int)fila.Cells["id"].Value;
 
                 if (valorColumna == partida.Id)
                 {
@@ -162,13 +162,13 @@ namespace Forms
                 }
             }
 
-            if(partida.JugadorGanador is not null)
+            if (partida.JugadorGanador is not null)
             {
                 filaEncontrada.Cells["Estado"].Value = "Finalizada";
             }
-            else if(partida.JugadorGanador is null)
+            else if (partida.JugadorGanador is null)
             {
-                filaEncontrada.Cells["Estado"].Value = "Cancelada"; 
+                filaEncontrada.Cells["Estado"].Value = "Cancelada";
             }
             else
             {

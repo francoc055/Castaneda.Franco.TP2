@@ -38,7 +38,7 @@ namespace Entidades
         public Jugador JugadorGanador { get => jugadorGanador; set => jugadorGanador = value; }
 
 
-        //cosntructor para BD
+        //constructor para BD
         public Partida(int id, string nombreUsuario, string nombreOponente, string ganador)
         {
             this.id = id;
@@ -74,7 +74,7 @@ namespace Entidades
             }
             catch(Exception)
             {
-                throw;
+                throw new MiExcepcion("ocurrio un error");
             }
         }
 

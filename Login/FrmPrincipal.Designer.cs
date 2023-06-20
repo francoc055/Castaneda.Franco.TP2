@@ -37,6 +37,9 @@
             groupBox1 = new GroupBox();
             label5 = new Label();
             dataGridViewPartidas = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
             btnCrearPartida = new Button();
             label3 = new Label();
@@ -53,9 +56,6 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             btnGuardarPartida = new Button();
-            Id = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPartidas).BeginInit();
             groupBox2.SuspendLayout();
@@ -118,6 +118,21 @@
             dataGridViewPartidas.Size = new Size(386, 147);
             dataGridViewPartidas.TabIndex = 2;
             dataGridViewPartidas.CellClick += dataGridViewPartidas_CellClick;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Nombre";
+            Column6.Name = "Column6";
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
             // 
             // groupBox2
             // 
@@ -236,6 +251,7 @@
             dataGridViewHistorial.EnableHeadersVisualStyles = false;
             dataGridViewHistorial.Location = new Point(3, 22);
             dataGridViewHistorial.Name = "dataGridViewHistorial";
+            dataGridViewHistorial.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.White;
             dataGridViewCellStyle5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -254,21 +270,25 @@
             // 
             Column1.HeaderText = "Id";
             Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Column2
             // 
             Column2.HeaderText = "Nombre usuario";
             Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // Column3
             // 
             Column3.HeaderText = "Nombre oponente";
             Column3.Name = "Column3";
+            Column3.ReadOnly = true;
             // 
             // Column4
             // 
             Column4.HeaderText = "Ganador";
             Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
             // label4
             // 
@@ -299,21 +319,6 @@
             btnGuardarPartida.Text = "Guardar partidas";
             btnGuardarPartida.UseVisualStyleBackColor = true;
             btnGuardarPartida.Click += btnGuardarPartida_Click;
-            // 
-            // Id
-            // 
-            Id.HeaderText = "Id";
-            Id.Name = "Id";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Nombre";
-            Column6.Name = "Column6";
-            // 
-            // Estado
-            // 
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
             // 
             // FrmPrincipal
             // 
