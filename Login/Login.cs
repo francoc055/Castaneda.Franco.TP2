@@ -9,8 +9,6 @@ namespace Login
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            Sistema.SerializarJson(Sistema.Jugadores, "jugadores.json");
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -22,7 +20,7 @@ namespace Login
             }
             catch
             {
-                MessageBox.Show("Ocurrio un error");
+                throw new MiExcepcion("ocurrio un error");
             }
             
         }
@@ -81,7 +79,7 @@ namespace Login
                 }
                 catch
                 {
-                    MessageBox.Show("Ocurrio un error");
+                    throw new MiExcepcion("ocurrio un error");
                 }
             }
         }

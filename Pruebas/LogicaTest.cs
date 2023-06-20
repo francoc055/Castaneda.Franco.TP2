@@ -39,12 +39,7 @@ namespace Pruebas
         {
             // Arrange
             Simulacion simular = new Simulacion();
-            //List<Carta> mazo = new List<Carta>
-            //{
-            //    new Carta("1basto", 1),
-            //    new Carta("10espada", 10),
-            //    new Carta("4copa", 4)
-            //};
+
             List<Carta> mazoNull = null;
             string nombreCarta = null;
 

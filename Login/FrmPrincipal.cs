@@ -13,22 +13,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Forms
 {
-    //public delegate void DelegadoActualizarDataGrid(Partida partida);
     public delegate void DelegadoActualizar(Partida partida);
+
     public partial class FrmPrincipal : Form
     {
         List<string> jugadores;
-        List<Task> hilos;
         List<Partida> partidasDelUsuario;
-        //string nombreUser;
         private static object lockObject = new object();
         Usuario usuario;
-        //Partida partida;
-
-
-
-
-
 
         public FrmPrincipal(Usuario usuario)
         {
@@ -36,9 +28,7 @@ namespace Forms
             this.StartPosition = FormStartPosition.CenterScreen;
 
             jugadores = new List<string>();
-            hilos = new List<Task>();
             partidasDelUsuario = new List<Partida>();
-            //this.nombreUser = nombreUser;
             this.usuario = usuario;
         }
 
@@ -49,8 +39,8 @@ namespace Forms
             dataGridViewPartidas.ClearSelection();
             CargarHistorialDelUsuario();
 
-
         }
+
 
         private void CargarHistorialDelUsuario()
         {
@@ -68,7 +58,7 @@ namespace Forms
             }
             catch (Exception)
             {
-                MessageBox.Show("ocurrio un error");
+                throw;
             }
         }
 
@@ -99,7 +89,6 @@ namespace Forms
             {
                 MessageBox.Show("Se debe seleccionar tu jugador y un oponente");
             }
-
         }
 
         private async void Jugar(Jugador jugador, Jugador oponente)
@@ -107,13 +96,12 @@ namespace Forms
 
             if (jugador is not null && oponente is not null)
             {
-                //Partida partida = new Partida(jugador, oponente);
                 Partida partida = new Partida(jugador, oponente);
                 partida.Nombre = partida.ToString();
-                //ActualizarListBox(partida);
                 ActualizarDataGridPartida(partida);
 
                 partidasDelUsuario.Add(partida);
+                Sistema.Partidas.Add(partida);
 
                 while (partida.Mazo.MazoCartas.Count > 0 && !partida.cancellation.IsCancellationRequested)
                 {
@@ -144,7 +132,7 @@ namespace Forms
 
                     lock (lockObject)
                     {
-                        Sistema.SerializarJson<Partida>(partidasDelUsuario, "partidasDelUsuario.json");
+                        Sistema.SerializarJson<Partida>(Sistema.Partidas, "partidasDelUsuario.json");
                     }
 
                     ActualizarEstado(partida);
@@ -155,13 +143,7 @@ namespace Forms
                     ActualizarEstado(partida);
                     partidasDelUsuario.Remove(partida);
                 }
-
-
-                //MessageBox.Show($"El ganador es {ConteoPuntos.Ganador(jugador, oponente)}");
             }
-
-
-
         }
 
         private void ActualizarEstado(Partida partida)
@@ -197,8 +179,6 @@ namespace Forms
 
         private void dataGridViewPartidas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Partida> aux = AccesoDatos.LeerFiltrado(usuario);
-
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow filaSeleccionada = dataGridViewPartidas.Rows[e.RowIndex];
@@ -206,26 +186,14 @@ namespace Forms
                 if (filaSeleccionada.Cells["Id"].Value != null)
                 {
                     int valorId = (int)filaSeleccionada.Cells["Id"].Value;
-                    if (partidasDelUsuario.Count > 0)
+                    if (Sistema.Partidas.Count > 0)
                     {
-                        foreach (Partida item in partidasDelUsuario)
+                        foreach (Partida item in Sistema.Partidas)
                         {
                             if (item.Id == valorId)
                             {
                                 FrmPartida formPartida = new FrmPartida(item);
                                 formPartida.Show();
-                                break;
-                            }
-                        }
-                    }
-                    else if (aux.Count > 0)
-                    {
-                        foreach (Partida item in aux)
-                        {
-                            if (item.Id == valorId)
-                            {
-                                FrmPartida formPartida = new FrmPartida(item);
-                                formPartida.ShowDialog();
                                 break;
                             }
                         }
@@ -306,6 +274,7 @@ namespace Forms
         {
             try
             {
+
                 AsignarVictoriasDerrotas();
 
                 foreach (Partida partida in partidasDelUsuario)
@@ -317,12 +286,14 @@ namespace Forms
                 }
 
                 AccesoDatos.Actualizar(usuario);
+                usuario.Victorias = 0;
+                usuario.Derrotas = 0;
 
                 partidasDelUsuario.Clear();
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocurrio un error");
+                throw;
             }
 
         }
@@ -346,11 +317,6 @@ namespace Forms
             }
 
             MessageBox.Show($"victorias: {usuario.Victorias.ToString()} - derrotas {usuario.Derrotas.ToString()}");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -11,9 +11,8 @@ using System.Windows.Forms;
 
 namespace Forms
 {
-    //public delegate void DelegadoActualizarGanador();
     public delegate Jugador DelegadoGanador(Jugador jugadorUno, Jugador jugadorDos);
-    //public delegate void DelegadoCargar();
+
     public partial class FrmPartida : Form
     {
         Partida partida;
@@ -29,10 +28,7 @@ namespace Forms
 
         private void FrmPartida_Load(object sender, EventArgs e)
         {
-
             Cargar();
-
-
         }
 
         private void Cargar()
@@ -63,7 +59,7 @@ namespace Forms
                 }
                 else
                 {
-                    if (EventoMostrarGanador(partida.JugadorUno, partida.JugadorDos) != null)
+                    if (partida.JugadorGanador != null)
                     {
                         labelGanador.Text = $"El ganador es: {EventoMostrarGanador(partida.JugadorUno, partida.JugadorDos).Nombre}";
                         btnCancelarPartida.Enabled = false;
@@ -72,8 +68,6 @@ namespace Forms
             }
 
         }
-
-
 
 
         private void btnRefrescar_Click(object sender, EventArgs e)

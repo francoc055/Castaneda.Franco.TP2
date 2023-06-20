@@ -53,8 +53,6 @@ namespace Entidades
                         indices.Clear();
                         indices.Add(cartasEnMesa[j]);
                         indices.Add(jugador.Mano[i]);
-                        //jugador.CartasParaPuntos.Clear();
-                        //jugador.CartasParaPuntos.Add(jugador.Mano[i]); 
                     }
                 }
             }
@@ -80,8 +78,6 @@ namespace Entidades
                             indices.Add(cartasEnMesa[j]);
                             indices.Add(cartasEnMesa[k]);
                             indices.Add(jugador.Mano[i]);
-                            //jugador.CartasParaPuntos.Clear();
-                            //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                         }
                     }
                 }
@@ -110,8 +106,6 @@ namespace Entidades
                                     indices.Add(cartasEnMesa[k-2]);
                                     indices.Add(cartasEnMesa[k]);
                                     indices.Add(jugador.Mano[i]);
-                                    //jugador.CartasParaPuntos.Clear();
-                                    //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                                 }
                             }
                             else if (k == 3)
@@ -125,8 +119,6 @@ namespace Entidades
                                 indices.Add(cartasEnMesa[k]);
                                 indices.Add(cartasEnMesa[k+1]);
                                 indices.Add(jugador.Mano[i]);
-                                //jugador.CartasParaPuntos.Clear();
-                                //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                             }
                         }
                         // evaluo la combinacion con el indice j en 1 -> 1 2 3 = '15'
@@ -139,8 +131,6 @@ namespace Entidades
                                 indices.Add(cartasEnMesa[k]);
                                 indices.Add(cartasEnMesa[k + 1]);
                                 indices.Add(jugador.Mano[i]);
-                                //jugador.CartasParaPuntos.Clear();
-                                //jugador.CartasParaPuntos.Add(jugador.Mano[i]);
                             }
                         }
                         else

@@ -67,40 +67,7 @@ namespace Entidades
             }
         }
 
-        /*public void RepartirCartas(Jugador j1, Jugador j2, List<Carta> mazo, Partida partida)
-        {
-            Random random = new Random();
-            int indice;
-            int diferencia = mazo.Count - 6;
-            if (SinCartas(j1, j2) && diferencia > 0)
-            {
-                //jugador uno
-                for (int i = 0; i < 3; i++)
-                {
-                    indice = random.Next(0, mazo.Count);
-                    while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
-                    {
-                        indice = random.Next(0, 11);
-                    }
-                    j1.Mano.Add(mazo[indice]);
-                    mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
-                }
-                //jugador dos
-                for (int i = 0; i < 3; i++)
-                {
-                    indice = random.Next(0, mazo.Count);
-                    while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
-                    {
-                        indice = random.Next(0, 11);
-                    }
-                    j2.Mano.Add(mazo[indice]);
-                    mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
-                }
-                
-            }
-            
-
-        }*/
+      
 
 
         public void IRepartirCartasEnMesa(List<Carta> mazo, Partida partida)
@@ -120,24 +87,6 @@ namespace Entidades
             }
         }
 
-        /*public void RepartirCartasEnMesa(List<Carta> mazo, Partida partida)
-        {
-            Random random = new Random();
-            int indice;
-
-            for (int i = 0; i < 4; i++)
-            {
-                indice = random.Next(0, mazo.Count);
-                while (!ExisteLaCarta(mazo, mazo[indice].Nombre))
-                {
-                    indice = random.Next(0, 11);
-                }
-                partida.CartasEnMesa.Add(mazo[indice]);
-                mazo = EliminarCartaDelMazo(mazo, mazo[indice].Nombre);
-            }
-        }*/
-
-        //public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
         public List<Carta> EliminarCartaDelMazo(List<Carta> mazo, string nombre)
         {
             if(nombre is null || mazo is null)

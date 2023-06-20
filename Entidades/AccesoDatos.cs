@@ -44,7 +44,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos");
             }
             finally
             {
@@ -74,7 +74,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos"); 
             }
             finally
             {
@@ -102,7 +102,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos");
             }
             finally
             {
@@ -132,7 +132,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos");
             }
             finally
             {
@@ -162,7 +162,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos");
             }
             finally
             {
@@ -196,7 +196,7 @@ namespace Entidades
             catch (Exception)
             {
 
-                throw;
+                throw new MiExcepcion("No se pudo leer la base de datos");
             }
             finally
             {

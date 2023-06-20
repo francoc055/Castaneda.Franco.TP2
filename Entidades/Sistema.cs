@@ -12,15 +12,19 @@ namespace Entidades
 
         static List<string> jugadores;
         static List<Usuario> usuariosDB;
+        static List<Partida> partidas;
+
 
         public static List<string> Jugadores { get => jugadores; set => jugadores = value; }
         public static List<Usuario> UsuariosDB { get => usuariosDB; set => usuariosDB = value; }
+        public static List<Partida> Partidas { get => partidas; set => partidas = value; }
 
         static Sistema()
         {
             jugadores = new List<string>();
             HardocodearJugadores();
             UsuariosDB = new List<Usuario>();
+            partidas = new List<Partida>();
         }
 
 

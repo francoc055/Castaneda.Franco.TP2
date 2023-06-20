@@ -13,14 +13,14 @@ namespace Entidades
         int derrotas = 0;
 
 
-
-
         public int Id { get => id; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
         public int Victorias { get => victorias; set => victorias = value; }
         public int Derrotas { get => derrotas; set => derrotas = value; }
+
+
 
         public Usuario(string nombre, string nombreUsuario, string contraseña) : this(nombre, nombreUsuario, contraseña, 0)
         {
